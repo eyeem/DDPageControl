@@ -93,7 +93,7 @@
 	{
 		CGRect dotRect = CGRectMake(x, y, diameter, diameter) ;
 		
-		if (i == currentPage)
+		if (i <= currentPage)
 		{
 			if (type == DDPageControlTypeOnFullOffFull || type == DDPageControlTypeOnFullOffEmpty)
 			{
