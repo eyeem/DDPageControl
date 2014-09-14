@@ -33,6 +33,8 @@ DDPageControlType ;
 @property(nonatomic) BOOL hidesForSinglePage ;
 
 @property(nonatomic) BOOL defersCurrentPageDisplay ;
+@property(nonatomic) BOOL additive;
+
 - (void)updateCurrentPageDisplay ;
 
 - (CGSize)sizeForNumberOfPages:(NSInteger)pageCount ;

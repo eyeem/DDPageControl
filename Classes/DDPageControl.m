@@ -32,6 +32,7 @@
 - (id)initWithType:(DDPageControlType)theType
 {
 	self = [self initWithFrame: CGRectZero] ;
+	self.additive = YES;
 	[self setType: theType] ;
 	return self ;
 }
@@ -93,7 +94,9 @@
 	{
 		CGRect dotRect = CGRectMake(x, y, diameter, diameter) ;
 		
-		if (i <= currentPage)
+		BOOL full = (self.additive ? i <= currentPage : i == currentPage);
+		
+		if (full)
 		{
 			if (type == DDPageControlTypeOnFullOffFull || type == DDPageControlTypeOnFullOffEmpty)
 			{
